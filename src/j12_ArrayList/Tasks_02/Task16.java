@@ -1,6 +1,8 @@
 package j12_ArrayList.Tasks_02;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Task16 {
 
@@ -16,6 +18,16 @@ public class Task16 {
      */
 
     public static void main(String[] args) {
+        List<String> calısanlar=new ArrayList<>(Arrays.asList("Ali","Veli","Ahmet"));
+        List<String> isverenler=new ArrayList<>(Arrays.asList("Cenk","Fuat","Müslüm"));
+        List<String> şirketler=new ArrayList<>(Arrays.asList("Amazon","Google","Testinium"));
+        List<List<String>> diziListe=new ArrayList<>();
+        diziListe.add(calısanlar);
+        diziListe.add(isverenler);
+        diziListe.add(şirketler);
+        System.out.println(diziListe);
+
+
 
     }
 }

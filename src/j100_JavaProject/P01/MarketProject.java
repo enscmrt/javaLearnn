@@ -51,10 +51,10 @@ public class MarketProject {//class level
 
     }//main sonu
 
-    private static ArrayList<String> getOrtalamaninAltindaKazancGünleri() {
+    public static ArrayList<String> getOrtalamaninAltindaKazancGünleri() {
         ArrayList<String>ortalamanınAltıGunler=new ArrayList<>();
         for (int i = 0; i < gunKazanc.size(); i++) {
-            if(gunKazanc.get(i)>getOrtalamaKazanc()){
+            if(gunKazanc.get(i)<getOrtalamaKazanc()){
                 ortalamanınAltıGunler.add(gunler.get(i));
             }
 
@@ -63,7 +63,7 @@ public class MarketProject {//class level
     }
 
 
-    private static ArrayList<String> getOrtalamaninUstundeKazancGünleri() {
+    public static ArrayList<String> getOrtalamaninUstundeKazancGünleri() {
         ArrayList<String>ortalamanınUstuGunler=new ArrayList<>();
         for (int i = 0; i < gunKazanc.size(); i++) {
             if(gunKazanc.get(i)>getOrtalamaKazanc()){
@@ -74,7 +74,7 @@ public class MarketProject {//class level
         return ortalamanınUstuGunler;
     }
 
-    private static double getOrtalamaKazanc() {
+    public static double getOrtalamaKazanc() {
 
         return haftanınToplamKazancı/7;
     }

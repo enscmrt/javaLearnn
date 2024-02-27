@@ -14,17 +14,19 @@ public class Task03 {
         System.out.println("Agam hangi sayi arirsen : ");
         int arananSayi=input.nextInt();
 
-       //boolean arananSayivarMi=false;
+       boolean arananSayivarMi=false;
 
-       //for (int i = 0; i < sayiList.size(); i++) {
+       for (int i = 0; i < sayiList.size(); i++) {
 
-       //    if (arananSayi == sayiList.get(i)) {
-       //        arananSayivarMi=true;
-       //        break;
-       //    }
-       //
-       //}
-       //System.out.println(arananSayivarMi ? "aranan sayi listte mevcut" : "aranan sayı listte mevcut değil");
-        System.out.println(sayiList.contains(arananSayi) ? "aranan sayi listte mevcut" : "aranan sayı listte mevcut değil");
+          if (arananSayi == sayiList.get(i)) {
+               arananSayivarMi=true;
+               break;
+           }
+
+       }
+       System.out.println(arananSayivarMi ? "aranan sayi listte mevcut" : "aranan sayı listte mevcut değil");
+      //  System.out.println(sayiList.contains(arananSayi) ? "aranan sayi listte mevcut" : "aranan sayı listte mevcut değil");
+
+
     }
 }

@@ -10,6 +10,32 @@ public class Q27_AtbashCode {
       Girilen bir str'nin AtbashCode print eden code create ediniz.
      */
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir string giriniz");
+        String metin = scan.nextLine().toLowerCase().replace(" ","");
+        String alfabe = "abcdefghijklmnopqrstuvwxyz";
+        String atbashCode ="zyxwvutsrqponmlkjihgfedcba";
+        for (int i = 0; i < metin.length(); i++) {
+            for (int j = 0; j < 26; j++) {
+                if (metin.charAt(i) == alfabe.charAt(j)) {
+                    System.out.print(atbashCode.charAt(j));
+                    break;
+                }
+
+            }
+
+        }
+        System.out.println();
+        System.out.println("2. yol");
+        String newStr ="";
+        for (int i = 0; i < metin.length(); i++) {
+            newStr+=atbashCode.charAt(alfabe.indexOf(metin.charAt(i)));
+
+        }
+        System.out.println(newStr);
+
+
+
 
     }
 }

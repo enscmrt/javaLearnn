@@ -13,8 +13,31 @@ public class Q09_ArmstrongNumber_4Digits {
           gösteren program yazınız*/
 
     public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        System.out.println("Lütfen bir sayı giriniz");
+        String sayi=scan.next();
+        System.out.println("Task 01");
+        System.out.println("armstrongControl(sayi) = " + armstrongControl(sayi));
+        System.out.println("Task02");
+        girilenSayıyaKadarArmstrongControl(sayi);
 
 
     }//main sonu
+
+    private static void girilenSayıyaKadarArmstrongControl(String sayi) {
+        for (int i = 1; i <= Integer.parseInt(sayi); i++) {
+            System.out.println(armstrongControl(String.valueOf(i)));
+
+        }
+    }
+
+    private static String armstrongControl(String sayi) {
+        int rakamKupToplam=0;
+        String[]rakam=sayi.split("");
+        for(String each:rakam){
+            rakamKupToplam+=Math.pow(Integer.parseInt(each),rakam.length);
+        }return  rakamKupToplam==Integer.parseInt(sayi)?"Girilen "+sayi+"sayisi ARMSTRONG sayıdır ":
+                "Girilen "+sayi+"sayisi ARMSTRONG sayı değildir ";
+    }
 
 }//Class sonu

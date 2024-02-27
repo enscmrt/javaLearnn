@@ -25,7 +25,40 @@ public class Task12_Manav {
          *
          * */
 
+        System.out.println("Agam markete hoş geldin : \n"+urunListesi+"\n"+"Ürünlerin fiyatları : "+urunFiyatlari);
+        musteriSecim();
 
+
+
+    }
+
+    private static void musteriSecim() {
+        System.out.print("Agam hangi ürün istersen: ");
+        int urunSecim= scan.nextInt();
+
+        if(urunSecim<6&&urunSecim>0){
+            System.out.println("Agam seçtiğiniz üründen kaç kilo istersen:");
+            double kilo = scan.nextDouble();
+            toplamOdenecekTutar+=kilo*urunFiyatlari.get(urunSecim-1);
+            System.out.println("Agam seçtiğin ürün :"+urunListesi.get(urunSecim-1)+ "\n"+ "istenilen kilo"+ kilo +"\n"+"agam sectiğin urun fiyatı: "+urunFiyatlari.get(urunSecim-1)+
+                    "\n"+"agam toplam ödemeniz: "+toplamOdenecekTutar);
+            System.out.println("Agam alışverişe devam için 1 kasa için 2 giriniz");
+            int karar =scan.nextInt();
+            if(karar==1){
+                musteriSecim();
+            } else if (karar==2) {
+                kasa();
+
+            }else System.out.println("Agam gelmiyim ora adam gibin bişey giresen");
+
+        }else{ System.out.println("Agam gelmiyim ora adam gibin bişey giresen");
+
+            musteriSecim();}
+
+    }
+
+    private static void kasa() {
+        System.out.println("Agam toplam ödemeniz geren tutar: "+toplamOdenecekTutar+"yine bekleriz");
     }
 
 

@@ -9,7 +9,7 @@ public class Task08 {
         // Task-> Girilen sayıların içinde ortalamadan buyuk olanları print eden METHOD create ediniz.
         List<Integer>sayiList=new ArrayList<>();
         Scanner scan=new Scanner(System.in);
-        System.out.println("Listeyi atamak için elemanları giriniz \nyeterli sayıya ulaşınca 'q' giriniz");
+        System.out.println("Listeyi atamak için elemanları giriniz \nyeterli sayıya ulaşınca negatif bir değer giriniz");
         int islem =0;
         int toplam =0;
         while (islem>=0){

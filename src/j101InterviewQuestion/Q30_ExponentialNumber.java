@@ -12,5 +12,23 @@ public class Q30_ExponentialNumber {
     // 4, 3 --> 4^3= 4*4*4 = 64
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("agam bi sayı tabanı giresen : ");
+        int taban = input.nextInt();
+        System.out.println("Agam bi sayı üssü giresen");
+        int us = input.nextInt();
+        System.out.println("*** for loop*****");
+        int sonuc =1;
+       // for (int i = 1; i <= us; i++) {
+        //    sonuc*=taban;
+        //
+        //}System.out.println(sonuc);
+
+        while (us!=0){
+            sonuc*=taban;
+            us--;
+        }
+        System.out.println(sonuc);
+
     }
 }

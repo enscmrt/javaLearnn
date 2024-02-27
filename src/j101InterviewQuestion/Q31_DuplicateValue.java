@@ -14,7 +14,20 @@ public class Q31_DuplicateValue {
          */
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("String giriniz:");
+        String str = input.nextLine();
+        List<Character> output = new ArrayList<>();
+        char[] charArray = str.toCharArray();
 
+        for (int i = 0; i < charArray.length; i++) {
+            for (int j = i + 1; j < charArray.length; j++) {
+                if (charArray[i] == charArray[j]&&!output.contains(charArray[j])) {
+                    output.add(charArray[i]);
+                }
+            }
+        }
+        System.out.println(output);
     }
 }
 

@@ -15,8 +15,33 @@ public class Q15_HackerLanguage {
 //    İpucu harfleri değiştirin ve ekrana yazdırın.(Array ve String Manipulation)
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lütfen bir metin giriniz: ");
+        String metin = input.nextLine();
+        hackerDili(metin);
+        hackerDili1(metin);
 
     }//main sonu
+
+    private static void hackerDili1(String metin) {
+        metin.replace("s","5").replace("a","4").replace("e","3").replace("i","1").
+                replace("o","0");
+        System.out.println(metin);
+
+    }
+
+    private static void hackerDili(String metin) {
+        String[]arr=metin.split("");
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i].equals("s")) arr[i]="5";
+            if(arr[i].equals("a")) arr[i]="4";
+            if(arr[i].equals("e")) arr[i]="3";
+            if(arr[i].equals("i")) arr[i]="1";
+            if(arr[i].equals("o")) arr[i]="0";
+            System.out.print(arr[i]);
+
+        }
+    }
 
 
 }// Class sonu

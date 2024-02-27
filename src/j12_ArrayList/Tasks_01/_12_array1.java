@@ -1,5 +1,8 @@
 package j12_ArrayList.Tasks_01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _12_array1 {
 
     /*
@@ -19,7 +22,18 @@ public class _12_array1 {
          */
 
     public static void main(String[] args) {
+        List<Integer>arr = new ArrayList<>(List.of(1,2,3,1));
+        System.out.println("dupicate(arr) = " + dupicate(arr));
+    }
 
-
+    private static boolean dupicate(List<Integer> arr) {
+        for (int i = 0; i < arr.size() - 1; i++) {
+            for (int j = i + 1; j < arr.size(); j++) {
+                if (arr.get(i) == arr.get(j)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

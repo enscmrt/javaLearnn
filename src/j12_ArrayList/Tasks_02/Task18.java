@@ -19,10 +19,19 @@ public class Task18 {
         sayilar.add(6);
         sayilar.add(1);
         sayilar.add(7);
+        System.out.println("sayilar = " + sayilar);
+
+        indexChange(sayilar);
 
 
     }
 
+    private static void indexChange(List<Integer> sayilar) {
+       int temp=sayilar.get(1);
+       sayilar.set(1,sayilar.get(5));
+       sayilar.set(5,temp);
+       System.out.println("sayilar = " + sayilar);
+    }
 
 
 }

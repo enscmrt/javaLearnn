@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Q14_CreateRandomList_SetList {
     //Task->
@@ -10,9 +11,29 @@ public class Q14_CreateRandomList_SetList {
 
 
     public static void main(String[] args) {
+        int[]arr=new int[10];
+       randomEkle(arr);
 
 
     }//main sonu
+
+    private static void randomEkle(int[] arr) {
+        int ciftAdet=0;
+        for (int i = 0; i < arr.length; i++) {
+            int rastgeleEleman=(int)(Math.random()*20);
+            if(rastgeleEleman%2==0){
+                arr[i]=111;
+                ciftAdet++;
+            }else {
+                arr[i]=rastgeleEleman;
+            }
+
+        }
+        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+        if(ciftAdet==0){
+            System.out.println("Cift sayı yoktur");
+        }else System.out.println("Çift adet: "+ciftAdet);
+    }
 
 
 }//Class sonu

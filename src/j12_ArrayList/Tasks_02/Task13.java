@@ -1,6 +1,7 @@
 package j12_ArrayList.Tasks_02;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Task13 {
@@ -13,8 +14,14 @@ public class Task13 {
 
         int arr[] = {3, 5, 1, 2, 7, 9, 2, 3, 5, 7};
         // 3, 5+1, 2+7+9, 2+3+5+7
+        arrArdisik(arr);
 
     } // main sonu
+
+    private static void arrArdisik(int[] arr) {
+
+
+    }
 
 
 }

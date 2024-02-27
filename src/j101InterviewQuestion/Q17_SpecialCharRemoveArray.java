@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Q17_SpecialCharRemoveArray {
     /*
@@ -20,8 +21,25 @@ public class Q17_SpecialCharRemoveArray {
     */
 
     public static void main(String[] args) {
+        List<String> moneyList1 = new ArrayList<String>(Arrays.asList("$13", "$15", "$20"));
+        List<String> moneyList2 = new ArrayList<String>(Arrays.asList("$13", "$-67", "$20"));
+        System.out.println("getSum(moneyList1) = " + getSum(moneyList1));
+        System.out.println("getSum(moneyList2) = " + getSum(moneyList2));
+
 
     }//main sonu
+
+    private static int getSum(List<String> para) {
+        int toplam =0;
+        for (String avuc: para){
+            toplam+=Integer.parseInt(avuc.replace("$",""));
+        }
+
+        if(toplam<0){
+            return -1;
+
+        }else return toplam;
+    }
 
 
 }//Class sonu

@@ -19,7 +19,21 @@ public class _01_arraylist1 {
          */
 
     public static void main(String[] args) {
+        ArrayList<String> meyve = new ArrayList<>(Arrays.asList("Orange", "Kiwi", "Peach", "Banana", "Orange"));
+        String fruit="Orange";
+
+        System.out.println("getCount(meyve, fruit) = " + getCount(meyve, fruit));
 
 
+    }
+
+    private static int getCount(ArrayList<String> meyve, String fruit) {
+        int count = 0;
+        for (String eleman : meyve) {
+           if(eleman.equals(fruit)){
+               count++;
+           }
+        }
+        return count;
     }
 }

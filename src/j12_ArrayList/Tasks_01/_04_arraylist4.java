@@ -21,7 +21,20 @@ public class _04_arraylist4 {
      */
 
     public static void main(String[] args) {
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("yellow", "red", "blue", "red", "blue"));
+        String s1 = "blue";
+        String s2 = "yellow";
+        System.out.println(changeInArraylist(arrayList, s1, s2));
 
 
+    }
+
+    private static String  changeInArraylist(ArrayList<String> arrayList, String s1, String s2) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (arrayList.get(i).equals(s1)) {
+                arrayList.set(i, s2);
+            }
+        }
+        return arrayList.toString();
     }
 }

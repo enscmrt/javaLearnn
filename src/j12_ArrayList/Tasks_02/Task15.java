@@ -10,5 +10,21 @@ public class Task15 {
      */
     public static void main(String[] args) {
 
+        List<Integer>sayi=new ArrayList<>();
+        for (int i = 2; i <100 ; i++) {
+            boolean asalMi=true;
+            for (int j = 2; j <i ; j++) {
+                if(i%j==0){
+                    asalMi=false;
+                    break;
+                }
+            }
+            if(asalMi){
+                sayi.add(i);
+            }
+
+        }
+        System.out.println(sayi);
+
     }
 }

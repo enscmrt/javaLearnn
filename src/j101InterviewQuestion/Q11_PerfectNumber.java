@@ -14,9 +14,26 @@ public class Q11_PerfectNumber {
     */
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lütfen bir sayı giriniz");
+        int sayi = input.nextInt();
+        perfectNumber(sayi);
 
 
     }//main sonu
+
+    private static void perfectNumber(int sayi) {
+        int toplam =0;
+        for (int i = 1; i <sayi; i++) {
+            if (sayi%i==0){
+                toplam+=i;
+            }
+
+        }
+        if(sayi==toplam){
+            System.out.println(sayi+"mükemmeldir");
+        }else System.out.println(sayi+"Mükemmel değildir");
+    }
 
 
 }//Class sonu

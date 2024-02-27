@@ -1,0 +1,71 @@
+1. İNTELLİJDE PROJE OLUSTUR+ BİR KAC CLASS OLUSTUR.CLASLARDA DEGİŞLİK YAPILABİLİR
+2 .İNTELİJDEN TERMİNALİ AC KOMUTLARİ GİR . (PROJEYİ initialize EDECEĞİZ (BASLATACAĞIZ))
+    -->git init
+    -->git add .
+    -->git commit - m "fist commi (iki tırnak arasına tarih vs. yazılabilir.)"
+    -->git push (dediğimizde bize uzak baglantının olmadıgını yani github veya baska bir depoya göndermeden oraya ait bir yolun olması gerektiğini söylür.
+3  burada iki yol var 
+   1- githuba gidip repositories olusturup ordan yolu kopyalayıp yapıştırabiliriz. ve daha sonra git push ile push ederiz.
+   2- İNTELLİJ'den GİT->GİTHUB->Share Project on Github(Githubda projeyi paylas) tıkadıktan sonra,  Proje ismi ile Repositories ismi aynı olacak sekilde bir ekran cıkacak 
+      Share tıkladıgımızda github'da artık bir repositories'miz olacak. (Privite veya public secimi yapılabiliyor)
+      github'a git.BU SEKİLDE (UZAK DEPODA) REMOTE'DA PROJEMİZ OLUSTU. 
+              ""Onemli Not: EGER PROJEYİ SİZ OLUSTURDUYSANIZ PROJEYİ COLLABORATORS ETMENİZ GEREK. BUNU NASIL YAPIYORUZ"" 
+                Githubda PROJENİ AC, setting e git Collabrators u sec ve eklemek istediğin kişilerin mail adreslerini veya github kullanıcı isimlerini
+                 Add people'ı tıklayarak gir. mail adreslerini girdiğin kişiler maillerini onaylamalılar.
+      Proje Paylasımı yapıldıktan sonra projeye dahil olan kişler githubdan projeleri kopyalamalilar.
+      Kopyaladıkları projeleri intelijde iki yontemle clonlayabilirler
+             a. File->Project from Vesin Control->cıkan ekran kopyalanan proje yapıstırılacak 
+             b. GİT-> clone cıkacak ve yine cıkan ekran kopyalanan proje yapıştırılacak.
+      BU SEKİLDE (UZAK DEPODAN) REMOTE'DEN KENDİ LOCAL BİLGİSAYARİMIZA ALMIS OLUYORUZ.
+
+4. PROJEYİ KENDİ REMOTE'DAN KENDİ LOCALİNE ALAN KİSİ NE YAPACAK.
+   1  BRANCH OLUSTURMALİ
+   -->git branch yazdiğimizda hic bir branch ın bulunmadıgını ve *'in masterde oldugunu görürüz.
+      *master
+      kendi localimizde calisma alanı olusturmamız icin branch olsuturmamız gerek.
+    -->git branch selcuk // selcuk branchını olsuturdum
+    hala selcuk branchıne gecemedik biz hala masterdayiz olusturdugumuz branche gecmek ve selcuk branchında kod yazmak icin
+    -->git checkout selcuk
+       
+    --> git branch (yazdıgımızda yıldızın hangi dalda oldugunu göreceğiz.)
+         master
+       * selcuk
+       burdan sonra artık selcuk branchında calısabilirim. local bilgisayarıma aldıgım projede selcuk branchi ile degişklikler yapabilir.
+       yaptıgım degisiklikleri Remote'e göndermek icin
+   --> git add .
+   --> git commit -m " 08.04.2022"
+   --> git push (git push dedikten sonra ilk defaya mahsus git push --set-upstream origin selcuk cıkacaktır.) bunun nedeni:REMOTE'da yani github'da selcuk branchini olsurmadık bu cıkan code Remote'da selcuk branchini olustur demek )
+   -->           (bunun nedeni:REMOTE'da yani github'da selcuk branchini olsurmadık. bu cıkan code Remote'da selcuk branchini olustur demek). 
+   --> git push --set-upstream origin selcuk ( bu code girdigimizde artık Remote' branch olustu. ve degişikliklerimiz gitti)
+       buradan sonra githuba gidiyoruz. "Compare&pull request" (Karşılaştır istegi kabul et cek diyor) -> Create pull request (Çekme isteği oluştur)-->Merge pull request (Çekme isteğini birleştir)--> Confirm merge(Birleştirmeyi onayla)
+                                        Pull request successfully merged and closed  (Çekme isteği başarıyla birleştirildi ve kapatıldı) çıkacaktır.
+         artık masterde selcuk brancının yaptıgı degişiklik görülecektir. aynı zamanda selcuk brancını olusturan da artık kendi yaotıgı değişiklikleri gördü.
+          Buraya kadar ne yaptık: Projeyi Clonladık.,kendi Localimize çektik., localde branc olusturduk code yazdık, remote'de branch olusturuk,  o remote kodları yolladık ve Master brancle birlestirdik.
+          BİZDE 4 CALİSMA YERİ VAR; 1- LOCAL BRANCH 2 REMOTE BRANCH 3 LOCAL MASTER 4 REMOTE MASTER.
+          SİMDİ İNTELLİJE DONUP LOCAL MASTER'A GECİP, LOCAL MASTER'I GUNCELLEMEMİS LAZIM NASIL YAPIYORUZ
+--> git checkout master (master branchine geç demek)
+mastere geçtiğimizde selcuk brancında yaptıgımız degişiklikleri göremiyoruz. görebilmek icin git pull yapcagiz ne demek remote'daki tüm degisiklikleri bana getir demek
+-->git pull (git pull yaptıktan sonra intelijde hernagi bir yere tıklarsanız yapılan degişiklikler gelecektir.)
+tekrar kendi branchime geçmek orada calısmak icin  git checkout yazıyoruz.
+--> git checkout selcuk 
+bu brancda bir kaç degişiklik yaptık. proje üzerinde kendi bölümümüzü çalıştık.calısmamız bittikten sonra 
+--> git add .
+--> git commit -m "tarih vs. "
+--> git push 
+yaptıktan sonra github hesabımıza giriyoruz.bu işlemleri yapıyoruz ["Compare&pull request" (Karşılaştır istegi kabul et cek diyor) -> Create pull request (Çekme isteği oluştur)-->Merge pull request (Çekme isteğini birleştir)
+                                                                    (--> Confirm merge(Birleştirmeyi onayla) -->Pull request successfully merged and closed  (Çekme isteği başarıyla birleştirildi ve kapatıldı) çıkacaktır.]
+eger "Compare&pull request" cıkmazsa projenin hemen altında bulunan "Pull request " e tıklayıp buradan bu işlemler yapılabilir.
+
+
+BASKA BİR KULLANICIYA GEÇİYYORUZ. bu kullanıcıda yukarıdaki gibi kendi branchıni olusturmali ve yaptıgı degişiklileri push etmeli ve githuba gidip merge etmelidir. yukarıdaki işlemlerin tekrarı)
+HER ZAMAN İŞLEME BASLAMADAN ÖNCE git checkout master yaparak değişiklik yapılım masterle birlestirilen herhangi birsey varsa masterdadır ve bizim bu degişiklikleri görebilmemiz icin masterda olmamamız gerekiyor
+--> git checkout master
+--> git pull (git pull ile masterdaki değişiklikleri kendi localimize cekiyoruz.)
+git pull yaptıktan sonra intellijde herhangi bir yere tıklıyoruz ve degişiklikler geliyor.
+bu kullanıcıda masteden kodlar cektikten sonra 
+--> git checkout kadir(kadir degişebilir.) yazarak yine kendi branchıne geçerek çalısmlarına burada devam ediyor. 
+masterde olan codları git checkout master,git pull yaparak almıstık,
+son olarak baskasının yazdıgı kodlarıda kendi localimize almak icin kendi branchımize geçtik
+-->git merge master
+yaparak baskasının yazdıgı kodlarıda kendi localimize aldık.
+

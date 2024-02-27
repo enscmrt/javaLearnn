@@ -2,7 +2,10 @@ package j12_ArrayList.Tasks_02;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
+import static j100_JavaProject.P01.MarketProject.*;
 
 public class Task01_Market {
     /* TASK :
@@ -24,7 +27,57 @@ public class Task01_Market {
      * */
 
 
-    public static void main(String[] args) {
+    static List<String>gunler = new ArrayList<>(Arrays.asList("Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"));
+    static List<Double>gunKazanc = new ArrayList<>(Arrays.asList());
+    static Scanner input = new Scanner(System.in);
+    static double haftanınToplamKazancı = 0;
+    public static void main(String[] args) {//main level
 
+        int gun=0;
+        while (gun<7){
+            System.out.print("Agam hele "+gunler.get(gun)+"gunu hasılatını giresen : ");
+            double gununKazancı = input.nextDouble();
+            haftanınToplamKazancı+=gununKazancı;
+            gunKazanc.add(gununKazancı);
+
+
+
+
+            gun++;
+        }
+        System.out.println("Agam bu haftalık toplam hasılatı: "+haftanınToplamKazancı);
+        System.out.println("Agam bu günlük toplam hasılatı: "+gunKazanc);
+        System.out.println("getOrtalamaKazanc() = " + getOrtalamaKazanc());
+        System.out.println("getOrtalamaninUstundeKazancGünleri() = " + getOrtalamaninUstundeKazancGünleri());
+        System.out.println("getOrtalamaninAltindaKazancGünleri() = " + getOrtalamaninAltindaKazancGünleri());
+
+    }//main sonu
+
+    public static ArrayList<String> getOrtalamaninAltindaKazancGünleri() {
+        ArrayList<String>ortalamanınAltıGunler=new ArrayList<>();
+        for (int i = 0; i < gunKazanc.size(); i++) {
+            if(gunKazanc.get(i)<getOrtalamaKazanc()){
+                ortalamanınAltıGunler.add(gunler.get(i));
+            }
+
+        }
+        return ortalamanınAltıGunler;
+    }
+
+
+    public static ArrayList<String> getOrtalamaninUstundeKazancGünleri() {
+        ArrayList<String>ortalamanınUstuGunler=new ArrayList<>();
+        for (int i = 0; i < gunKazanc.size(); i++) {
+            if(gunKazanc.get(i)>getOrtalamaKazanc()){
+                ortalamanınUstuGunler.add(gunler.get(i));
+            }
+
+        }
+        return ortalamanınUstuGunler;
+    }
+
+    public static double getOrtalamaKazanc() {
+
+        return haftanınToplamKazancı/7;
     }
 }

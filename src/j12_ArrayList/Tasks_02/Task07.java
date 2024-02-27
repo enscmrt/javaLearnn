@@ -16,7 +16,7 @@ public class Task07 {
          * OUTPUT : String[] isimler={"Haluk","Emin","Furkan","Kerem","Taylan","Orhan","Sinan","Kemal","Ahmet","Ali"};
          */
 
-        ArrayList<String > isimlist=new ArrayList<String>(Arrays.asList("Haluk","Emin","Kemal","Kerem","Taylan","Orhan","Sinan","Furkan","Ahmet","Ali"));
+        ArrayList<String > isimlist=new ArrayList<>(Arrays.asList("Haluk","Emin","Kemal","Kerem","Taylan","Orhan","Sinan","Furkan","Ahmet","Ali"));
         String str3= isimlist.get(2);
         String str8= isimlist.get(7);
         System.out.println("isimlist = " + isimlist);

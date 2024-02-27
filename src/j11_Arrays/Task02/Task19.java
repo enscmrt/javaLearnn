@@ -8,6 +8,23 @@ public class Task19 {
         int arr1[][] = {{1, 2}, {3, 4, 5}, {6}};
         int arr2[][] = {{7, 8, 9}, {10, 11}, {12}};
 
+        /*for (int i = 0; i < arr1.length&& i<arr2.length; i++) {
+            int toplam=0;
+            for (int j = 0; j < arr1[i].length && j<arr2[i].length; j++) {
+                toplam+=arr1[i][j]+arr2[i][j];
+
+            }System.out.println("toplam = " + toplam);
+
+        }*/
+
+        for (int i = 0; i < Math.min(arr1.length, arr2.length); i++) {
+            int sum = 0;
+            for (int j = 0; j < Math.min(arr1[i].length, arr2[i].length); j++) {
+                sum += arr1[i][j] + arr2[i][j];
+            }
+            System.out.println("Indeks " + i + " toplami: " + sum);
+        }
+
 
 
     }

@@ -1,5 +1,7 @@
 package j01_Variables;
 
+import java.util.Arrays;
+
 public class C01_HelloWorld {
     //java yorum satırlarını ->comment line compile(derleme) yapmaz
     //->tek satır yorum
@@ -28,6 +30,8 @@ public class C01_HelloWorld {
         println(): yazdırma işleminden sonra komut alt satırdan devam eder.
         java'da space bir karakter olarak tanımlanır.
         */
+
+
 
     }
 }
