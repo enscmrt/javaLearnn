@@ -73,6 +73,34 @@ public class C02_StringBuilder {
         System.out.println("str = " + str);
         StringBuilder sb5 =new StringBuilder(str);//str sb ye atandı
 
+        /*
+compareTo()->metodunu iki SB'i eşitliğini kontrol etmek için ilk characterden itibaren tum characterleri karşılaştırır.
+eşit characterler için herhangi bir return vermezken farklı characterler için ascii table göre kaç değer geri veya ileri oldg
+print eder
+Tum characterler eşit ise 0 return eder
+ahan da Trick-> SB ile String variable compare edilirse :CTE -> elma armut kıyası olmaz...
+ */
+        StringBuilder sb6 = new StringBuilder("Bahanesi olanın başarısı olmaz");
+        StringBuilder sb7 = new StringBuilder("Bahanesi olanın başarısı olmaz");
+        StringBuilder sb8 = new StringBuilder("Bahanesi olanın Başarısı olmaz");
+        String str1= "Bahanesi olanın başarısı olmaz";
+        System.out.println("sb6.compareTo(sb7) = " + sb6.compareTo(sb7));
+        System.out.println("sb6.compareTo(sb8) = " + sb6.compareTo(sb8));
+        //System.out.println("sb6.compareTo(str1) = " + sb6.compareTo(str1));
+        System.out.println("sb6.compareTo(new StringBuilder(str1)) = " + sb6.compareTo(new StringBuilder(str1)));
+
+        //sb eşitliği
+        System.out.println("sb6.equals(sb7) = " + sb6.equals(sb7));
+        System.out.println("sb6==sb7 = " + (sb6 == sb7));
+        System.out.println("sb6.equals(str1) = " + sb6.equals(str1));
+        //System.out.println("sb6==str1 = " + (sb6 == str1));
+        //sb de equals meth aynı == gibi hem ref hemde value karşılaştırması yapar true veya false return eder
+
+        //sb de karakterleri indexe göre ters cevirme tersten yazma
+        System.out.println("reverse öncesi sb6 : "+sb6);
+        System.out.println("reverse sonrası sb6 : "+sb6.reverse());
+
+
 
     }
 }
