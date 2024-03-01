@@ -10,7 +10,7 @@ public class Task24 {
 */
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Lütfen fibonacci için bir sayı giriniz:");
+        System.out.println("Kaç diziden oluşan fibonacci istersiniz:");
         int sayi = scan.nextInt();
 
         fibonacci(sayi);
@@ -21,8 +21,8 @@ public class Task24 {
 
         int num1= 0;
         int num2= 1;
-        System.out.println(num1+ " "+num2);
-        for (int i = 0; i <=sayi ; i++) {
+        System.out.print(num1+ " "+num2);
+        for (int i = 2; i <sayi ; i++) {
             int num3 = num1+num2;
 
             System.out.print(" "+num3);

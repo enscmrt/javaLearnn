@@ -28,7 +28,6 @@ public class Task19 {
             System.out.println("Indeks " + i + " toplami: " + sum);
         }*/
         int sum = 0;
-
         for (int i = 0; i < arr1.length; i++) { // 1. Arrayi geziyor
 
             for (int k = 0; k < arr2.length; k++) { // 2. Arrayi geziyor
@@ -40,14 +39,14 @@ public class Task19 {
                         for (int l = 0; l < arr2[k].length; l++) { // 2. Arrayin ic arraylerini geziyor
 
                             if (j == l) { // ic arraylerin indexleri esit ise calisan if blogu
-
-                                sum = sum + arr1[i][j] + arr2[k][l];  // ayni index'e sahip elemanlari topluyor
+                                sum = arr1[i][j] + arr2[k][l];  // ayni index'e sahip elemanlari topluyor
+                                System.out.print(" " + sum);
                             }
                         }
                     }
             }
         }
-        System.out.println(sum);
+        //System.out.println(sum);
 
 
 
