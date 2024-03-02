@@ -11,7 +11,7 @@ public class ManavProject {//Class level
     static ArrayList<Double>urunFiyatListesi=new ArrayList<>(Arrays.asList(20.5,35.3,40.2,50.0,85.7));
     static double toplamOdenecekMiktar=0;
 
-    static Scanner input =new Scanner(System.in);
+    public static Scanner input =new Scanner(System.in);
     public static void main(String[] args) {//main level
         /* TASK :
          * Basit bir 5 ürünlü manav alisveris programi yaziniz.
