@@ -114,7 +114,7 @@ public class Kahve {
                 c_RED+"seker tercihiniz Hayır ise -> H\n giriniz : ");
         String sekerTercihi=input.next().substring(0,1);
         if(sekerTercihi.equalsIgnoreCase("E")){
-            System.out.println("Kaç şeker alırsınızBOLD");
+            System.out.println("Kaç şeker alırsınız");
             int sekerSayisi=input.nextInt();
             System.out.println(BOLD+ "Kahvenize "+sekerSayisi+"tane şeker ekleniyor");
             sugar="Seker Kahve";
