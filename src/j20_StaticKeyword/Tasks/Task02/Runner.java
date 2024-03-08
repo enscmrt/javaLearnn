@@ -22,8 +22,7 @@ public class Runner {
         musteri.elektrikHesabi.tüketimEkle(60);
         System.out.println("musteri.elektrikHesabi.toplamTuketim = " + musteri.elektrikHesabi.toplamTuketim);
         System.out.println("musteri.elektrikHesabi.odenecekTutar() = " + musteri.elektrikHesabi.odenecekTutar());
-
-
+        System.out.println("musteri.elektrikHesabi.fatura = " + musteri.elektrikHesabi.fatura);
 
 
     }

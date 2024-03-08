@@ -24,4 +24,25 @@ public class C01_AccessModifier {
           Class tanımlanırken "private" veya "protected" access modifier kullanilmaz.
 
  */
+
+    private  int privateYas=33;
+    int defaultYas=21;
+    protected int protectedYas=40;
+    public int publicYas=49;
+
+    private C01_AccessModifier() {
+        System.out.println("p siz const run edildi");
+    }
+
+    public C01_AccessModifier(int ilkYas, int sonYas) {
+        System.out.println("2 p li const run edildi");
+    }
+
+    private static void privateMethod(){
+        System.out.println("privateMethod run edildi");
+    }
+
+    static void defaultMethod(){
+        System.out.println("defaultMethod run edildi");
+    }
 }

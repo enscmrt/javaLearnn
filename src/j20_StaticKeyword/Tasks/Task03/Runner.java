@@ -15,6 +15,18 @@ public class Runner {
 
     public static void main(String[] args) {
 
+        Lesson lesson1 = new Lesson("Math",5);
+        Lesson lesson2 = new Lesson("English",15);
+        Lesson lesson3 = new Lesson("Science",3);
+
+        Student student= new Student("Enes",10);
+        student.lessons.add(lesson1);
+        student.lessons.add(lesson2);
+        student.lessons.add(lesson3);
+        student.alınanDersler();
+        System.out.println("student.lessons = " + student.lessons);
+        student.toplamKredisi();
+
 
     }
 

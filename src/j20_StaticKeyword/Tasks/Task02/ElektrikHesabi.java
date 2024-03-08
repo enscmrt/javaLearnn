@@ -10,7 +10,7 @@ public class ElektrikHesabi {
     }
 
     public void tüketimEkle(int a) {
-        toplamTuketim+=a;
+        toplamTuketim+=a;//Aynı class içerisinde static olmayan variable static olmayan methodda obj olmdan call edilebilir.
     }
 
 }
