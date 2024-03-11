@@ -16,12 +16,14 @@ public class Runner {
 
 
     public static void main(String[] args) {
-        Bisiklet obj1=new Bisiklet(20,2);
-        System.out.println("obj1.durumGoster() = " + obj1.durumGoster());
-        System.out.println("obj1.vitesAzalt() = " + obj1.vitesAzalt());
-        System.out.println("obj1.vitesArtir() = " + obj1.vitesArtir());
-        obj1.islemYap();
-        System.out.println("obj1.hizDegistir(15) = " + obj1.hizDegistir(15));
+        Bisiklet bisiklet= Bisiklet.bisikletOlsutur();
+        Scanner oku=new Scanner(System.in);
+        int secim=0;
+        do{
+            bisiklet.menuYaz();
+            secim=oku.nextInt();
+            bisiklet.islemYap(bisiklet, secim);
+        }while(secim < 5);
 
 
     }

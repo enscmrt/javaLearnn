@@ -1,7 +1,5 @@
-package j100_JavaProject.P04.KahveMakinesi;
+package j100_JavaProject.P05.KahveMakinesi;
 
-
-import static j100_JavaProject.P04.KahveMakinesi.Kahve.BOLD;
 
 public class KahveRunner {
 

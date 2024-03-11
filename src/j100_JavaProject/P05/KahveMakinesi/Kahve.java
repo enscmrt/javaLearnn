@@ -1,4 +1,4 @@
-package j100_JavaProject.P04.KahveMakinesi;
+package j100_JavaProject.P05.KahveMakinesi;
 
 import java.util.ArrayList;
 import java.util.Arrays;
