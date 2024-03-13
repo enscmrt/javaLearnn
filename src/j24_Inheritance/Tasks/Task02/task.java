@@ -1,5 +1,8 @@
 package j24_Inheritance.task02;
 
+import j24_Inheritance.Tasks.Task02.SubClass;
+import j24_Inheritance.Tasks.Task02.SuperClass;
+
 public class task {
         /*
 
@@ -23,8 +26,4 @@ public class task {
     süperClasstaki sayi  :17
      */
 
-    public static void main(String[] args) {
-
-
-    }
 }

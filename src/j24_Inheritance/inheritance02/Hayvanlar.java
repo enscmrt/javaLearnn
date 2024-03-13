@@ -17,7 +17,7 @@ public class Hayvanlar {//grandparent class
     }
 
     public void mM(){
-        System.out.println("mA -> Hayvanlar classındaki meth call edildi.");
+        System.out.println("mM -> Hayvanlar classındaki meth call edildi.");
     }
 
 
