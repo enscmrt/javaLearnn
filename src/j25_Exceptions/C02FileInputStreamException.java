@@ -29,7 +29,7 @@ public class C02FileInputStreamException {
             //fis-> path(yolu:kaynagı) tanımlana file erişim saglayan obj create edildi
 // FileNotFoundException -> erişilmesi gereken filepath (dosya kaynagı) yanlışsa isitisnası:adres yanlışsa
         int k;
-        while ((k = fis.read()) != -1){
+        while ((k = fis.read()) != -1){//fis obj ile read() meth erişebilen dosyadaki her bir char in ascii değeri -1 olana kadar tanımlandı
             System.out.print((char)k);
 
         }
