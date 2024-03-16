@@ -26,7 +26,10 @@ ahan da TRİCK kosesinde bugun :)
         int yas=scan.nextInt();
         try {
             if (yas<18){
-                throw  new IllegalArgumentException("Bu"+yas+"yasında ehliyet alamazsın");
+                //throw  new IllegalArgumentException("Bu"+yas+"yasında ehliyet alamazsın");
+                hata();//throw exc meth call edildi
+                //throw keyword ile data type da exc obj tanımlanıp hata fırlatması yapıldı
+                //yas<18 gerçekleşirse java catch blok exc handle edecek
             }else System.out.println("Yasın tutuyor ehliyet alabilirsin");
             System.out.println("try  sorunsuz calıstı");
         }catch (IllegalArgumentException e){
@@ -36,5 +39,9 @@ ahan da TRİCK kosesinde bugun :)
 
         }
         System.out.println("app sorunsuz calıstı");
+    }
+
+    private static void hata() {
+        throw  new IllegalArgumentException("Bu yasında ehliyet alamazsın");
     }
 }
