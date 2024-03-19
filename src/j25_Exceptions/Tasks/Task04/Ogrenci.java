@@ -14,6 +14,10 @@ public class Ogrenci {
         this.yas = yas;
     }
 
+    public Ogrenci(int yas) {
+        this.yas = yas;
+    }
+
     public Ogrenci() {
     }
 

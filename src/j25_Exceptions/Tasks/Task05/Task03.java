@@ -13,6 +13,19 @@ public class Task03 {
     }
 
     private static void randomSayi() {
+        int random1 =5;
+        int random2 =4;
+        int random3=random1+random2;
+        System.out.println("random3 = " + random3);
+        if(random3<12){
+            try {
+                throw new IllegalArgumentException("Sayı 12'den küçük ise hata verir");
+            }catch (IllegalArgumentException e){
+                System.out.println("e.getMessage() = " + e.getMessage());
+            }
+
+        }
+
 
 
     }

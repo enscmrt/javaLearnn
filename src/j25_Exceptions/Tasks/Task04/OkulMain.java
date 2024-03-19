@@ -8,22 +8,18 @@ import static j25_Exceptions.Tasks.Task04.Okul.okulList;
 public class OkulMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Okul obj = new Okul();
-        obj.setMaxOgrSayisi(10);
+        Okul school = new Okul("Fatih Lisesi",5);
 
-        for (int i = 1; i <= okulList.size(); i++) {
-            int count=0;
-            count++;
-            okulList.add(okulList.get(15));
-            try {
-                if(okulList.size()>obj.getMaxOgrSayisi()){
-                    throw new ArithmeticException("Öğrenci sayısı sınırı aşıldı");
-                }else System.out.println("Öğrenci limiti var");
+               Ogrenci ogr1 = new Ogrenci("Enes","Cömert",14);
+               school.ogrenciEkle(ogr1);
+               Ogrenci ogr2 = new Ogrenci("Mehmet","Ekinci",11);
+               school.ogrenciEkle(ogr2);
+               Ogrenci ogr3 = new Ogrenci("Fatma","Cömert",22);
+               school.ogrenciEkle(ogr3);
+               Ogrenci ogr4 = new Ogrenci("Tarık Ziya","Cömert",14);
+               school.ogrenciEkle(ogr4);
 
-            }catch (ArithmeticException e){
-                System.out.println(e.getMessage());
             }
-
         }
 
 
@@ -32,5 +28,6 @@ public class OkulMain {
 
 
 
-    }
-}
+
+
+

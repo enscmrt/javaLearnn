@@ -10,7 +10,7 @@ public class Okul {
     private List<Ogrenci> ogrenciler;
     public static List<Okul> okulList = new ArrayList<>();
 
-    public Okul(String okulAd, int maxOgrSayisi, List<Ogrenci> ogrenciler) {
+    public Okul(String okulAd, int maxOgrSayisi) {
         this.okulAd = okulAd;
         this.maxOgrSayisi = maxOgrSayisi;
         this.ogrenciler = ogrenciler;
@@ -43,11 +43,26 @@ public class Okul {
         this.ogrenciler = ogrenciler;
     }
 
-    @Override
-    public String toString() {
-        return
-                "okulAd='" + okulAd + '\'' +
-                ", maxOgrSayisi=" + maxOgrSayisi +
-                ", ogrenciler=" + ogrenciler;
+    public boolean ogrenciEkle(Ogrenci ogrenci) {
+        try {
+            if (ogrenci.getYas() > 15) {
+                throw new IllegalArgumentException("Öğrencinin yaşı 15'i geçemez.");
+            }
+
+            if (ogrenciler.size() >= maxOgrSayisi) {
+                throw new IllegalStateException("Maksimum öğrenci sayısına ulaşıldı.");
+            }
+
+            ogrenciler.add(ogrenci);
+            System.out.println(ogrenci.getAd() + " öğrencisi eklendi.");
+            return true;
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return false;
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
     }
 }
+
