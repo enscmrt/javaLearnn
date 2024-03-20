@@ -1,27 +1,51 @@
 package j26_Abstract.Tasks;
 
-class Calculator {
+import java.util.Scanner;
+
+abstract class Calculator {
+    public abstract int calculate(int a, int b);
 
 
-}
-
-class Sum {
-
-}
-
-class Divide {
 
 }
 
-class Multiply {
+class Sum extends Calculator {
 
+    @Override
+    public int calculate(int a, int b) {
+        return a+b;
+    }
 }
 
-class Substract {
+class Divide extends Calculator {
 
+    @Override
+    public int calculate(int a, int b) {
+        return a/b;
+    }
+}
+
+class Multiply extends Calculator {
+
+    @Override
+    public int calculate(int a, int b) {
+        return a*b;
+    }
+}
+
+class Substract extends Calculator {
+
+    @Override
+    public int calculate(int a, int b) {
+        return a-b;
+    }
 }
 
 public class Task01 {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+
+    }
 
 
 }
