@@ -1,20 +1,67 @@
 package j26_Abstract.Tasks;
 
-class Data {
+abstract class Data {
+    public abstract double getArea();
+    final double pi =3.14;
+    private int radius;
+    private int length;
+    private int width;
+    static double area;
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
 }
 
 
-class Circle {
+class Circle extends Data{
 
 
+    @Override
+    public double getArea() {
+        return area= pi*getRadius()*getRadius();
+    }
 }
 
-class Rectangle {
+class Rectangle extends Data{
 
+    @Override
+    public double getArea() {
+        return area=getLength()*getWidth();
+    }
 }
 
 public class Task03 {
+    public static void main(String[] args) {
+        Circle c1=new Circle();
+        c1.setRadius(5);
+        System.out.println("c1.getArea() = " + c1.getArea());
+        Rectangle r1=new Rectangle();
+        r1.setLength(12);
+        r1.setWidth(5);
+        System.out.println("r1.getArea() = " + r1.getArea());
+
+    }
 
 
 }

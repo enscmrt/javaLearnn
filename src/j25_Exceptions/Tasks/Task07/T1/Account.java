@@ -12,6 +12,9 @@ public class Account {
     public static List<Account> accountList = new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
 
+    public Account() {
+    }
+
     public Account(long accountNumber, String adSoyad, long bakiye, long gunlukLimit) {
         this.accountNumber = accountNumber;
         this.adSoyad = adSoyad;
@@ -19,7 +22,12 @@ public class Account {
         this.gunlukLimit = gunlukLimit;
     }
 
-    public Account() {
+    public List<Account> getAccountList() {
+        return accountList;
+    }
+
+    public void setAccountList(List<Account> accountList) {
+        this.accountList = accountList;
     }
 
     public long getAccountNumber() {
@@ -28,6 +36,14 @@ public class Account {
 
     public void setAccountNumber(long accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public long getGunlukLimit() {
+        return gunlukLimit;
+    }
+
+    public void setGunlukLimit(long gunlukLimit) {
+        this.gunlukLimit = gunlukLimit;
     }
 
     public String getAdSoyad() {
@@ -46,36 +62,36 @@ public class Account {
         this.bakiye = bakiye;
     }
 
-    public long getGunlukLimit() {
-        return gunlukLimit;
+    public void paraEkle(long eklenecekMiktar) {
+        this.bakiye += eklenecekMiktar;
+        System.out.println(this.getBakiye());
     }
 
-    public void setGunlukLimit(long gunlukLimit) {
-        this.gunlukLimit = gunlukLimit;
-    }
-    public  static boolean TcKontrol(){
-        String Tc="";
-        if (Tc.length() ==10){
-            return true;
-        }else {
-            System.out.println("TC geçersiz");
+    public void paraCikar(long cekilecekMiktar) {
+        if (cekilecekMiktar > this.getBakiye()) {
+            System.out.println("Bakiye yetersiz.");
+        } else {
+            try {
+                gunlukLimit += cekilecekMiktar;
+                if (gunlukLimit > 5000) {
+                    throw new Exception();
+                } else {
+                    System.out.println("Cekme islemi basari ile tamamnandi.");
+                    this.bakiye -= cekilecekMiktar;
+                    System.out.println(this.getBakiye());
+                }
+            } catch (Exception e) {
+                System.out.println("Limit Asim Uyarisi : Gunluk limit 5000TL'dir.");
+            }
         }
-
-     return false;
     }
-    static List<Integer>account=new ArrayList<>();
-    static int para = scan.nextInt();
-    public static void paraEkle(){
 
-        System.out.println("Lütfen yatırmak istediğiniz parayı giriniz");
-
-        account.add(para);
-
-
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountList=" + accountList.toString() +
+                '}';
     }
-    public static void paracikar(){
-        System.out.println("Lütfen çekmek istediğiniz parayı giriniz");
-        int para = scan.nextInt();
 
-    }
+
 }
