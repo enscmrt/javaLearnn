@@ -1,5 +1,9 @@
 package j27_Interface.Tasks.Task08;
 
-public class Swallow{
+public class Swallow implements Flying{
 
+    @Override
+    public String food() {
+        return "hamsi";
+    }
 }

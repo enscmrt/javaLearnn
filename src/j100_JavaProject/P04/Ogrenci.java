@@ -1,24 +1,28 @@
 package j100_JavaProject.P04;
 
-public class Ogrenci extends Kisi {//Kisi parnet Class'a extend child pojo Class
-    //fields
-    private String ogcNumara;// instance:obj variable
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ogrenci extends Kisi{
+    static Map<String,Ogrenci> ogrenciListesiMap=new HashMap<>();
+    private int numara;
     private String sinif;
 
-    //constructor...
-    public Ogrenci() {//p'siz sefil cons.
-
+    public Ogrenci() {
     }
-    public Ogrenci(String adSoyad, String kimlikNo, int yas, String OgrcNumara, String sinif) {//full p'li zengin const.
-        super(adSoyad, kimlikNo, yas);
-        this.ogcNumara = OgrcNumara;
+
+    public Ogrenci(String adSoyad, int yas, int numara, String sinif) {
+        super(adSoyad, yas);
+        this.numara = numara;
         this.sinif = sinif;
     }
 
-    //getter-setter meth..
+    public int getNumara() {
+        return numara;
+    }
 
-    public String getOgcNumara() {
-        return ogcNumara;
+    public void setNumara(int numara) {
+        this.numara = numara;
     }
 
     public String getSinif() {
@@ -28,14 +32,11 @@ public class Ogrenci extends Kisi {//Kisi parnet Class'a extend child pojo Class
     public void setSinif(String sinif) {
         this.sinif = sinif;
     }
-    //toString method..
-
-
 
     @Override
-   public String toString() {
-       return super.toString() +
-               ", ogcNumara='" + ogcNumara + '\'' +
-               ", sinif='" + sinif;
-   }
+    public String toString() {
+        return super.toString()+
+                "numara=" + numara +
+                ", sinif='" + sinif + '\'' ;
+    }
 }

@@ -1,6 +1,5 @@
-package j29_Collection.p02_Set.Tasks;
+package j29_Collection.Tasks;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 

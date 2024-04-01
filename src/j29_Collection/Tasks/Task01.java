@@ -1,6 +1,6 @@
-package j29_Collection.p02_Set.Tasks;
+package j29_Collection.Tasks;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Task01 {
     public static void main(String[] args) {
@@ -9,7 +9,14 @@ public class Task01 {
          main içersinde meth return ettiği arryList'i hashSet, linkedHashSet ve TreeSett'e atayınız.
          */
         String arr[] = {"javaCAN", "javaSU", "javaNAZ", "javIYE", "javIDAN", "javaTAR", "javFER"};
+        cevir();
+
+
 
 
     }//main sonu
+
+    private static void cevir() {
+    }
+
 }

@@ -60,5 +60,3 @@ public class Find_numbers_of_words {
 
 
     }
-
-}

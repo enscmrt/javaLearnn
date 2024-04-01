@@ -1,9 +1,4 @@
-package j29_Collection.p02_Set.Tasks;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+package j29_Collection.Tasks;
 
 public class Task11 {
     public static void main(String[] args) {

@@ -1,7 +1,4 @@
-package j29_Collection.p02_Set.Tasks;
-
-import java.util.Arrays;
-import java.util.HashSet;
+package j29_Collection.Tasks;
 
 public class Task06 {
     public static void main(String[] args) {

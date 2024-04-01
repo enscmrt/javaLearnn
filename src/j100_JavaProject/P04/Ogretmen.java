@@ -1,25 +1,20 @@
 package j100_JavaProject.P04;
 
-public class Ogretmen extends Kisi {//Kisi parent Class'a extend child pojo Class
+import java.util.HashMap;
+import java.util.Map;
 
-     //fields
-   private String sicilNo;// instance:obj variable
-   private String bolum;
+public class Ogretmen extends Kisi {
+    static Map<String, Ogretmen> ogretmenListesiMap = new HashMap<>();
+    private String bolum;
+    private String sicilNo;
 
-   //constructor...
-    public Ogretmen() {//p'siz sefil cons.
-
+    public Ogretmen() {
     }
-    public Ogretmen(String adSoyad, String kimlikNo, int yas, String sicilNo, String bolum) {//full p'li zengin const.
-        super(adSoyad, kimlikNo, yas);
-        this.sicilNo = sicilNo;
+
+    public Ogretmen(String adSoyad, int yas, String bolum, String sicilNo) {
+        super(adSoyad, yas);
         this.bolum = bolum;
-    }
-
-    //getter-setter meth..
-
-    public String getSicilNo() {
-        return sicilNo;
+        this.sicilNo = sicilNo;
     }
 
     public String getBolum() {
@@ -29,46 +24,19 @@ public class Ogretmen extends Kisi {//Kisi parent Class'a extend child pojo Clas
     public void setBolum(String bolum) {
         this.bolum = bolum;
     }
-    //toString method..
+
+    public String getSicilNo() {
+        return sicilNo;
+    }
+
+    public void setSicilNo(String sicilNo) {
+        this.sicilNo = sicilNo;
+    }
 
     @Override
     public String toString() {
-        return super.toString() +
-                ", sicilNo='" + sicilNo + '\'' +
-                ", bolum='" + bolum  ;
+        return super.toString()+
+                "bolum='" + bolum + '\'' +
+                ", sicilNo='" + sicilNo + '\'';
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

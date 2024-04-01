@@ -1,4 +1,4 @@
-package j29_Collection.p02_Set.Tasks;
+package j29_Collection.Tasks;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;

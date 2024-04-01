@@ -1,22 +1,16 @@
 package j100_JavaProject.P04;
 
-public class Kisi {//parent pojo class
-    //fields...
+public class Kisi {
     private String adSoyad;
-    private String kimlikNo;
     private int yas;
 
-
-
-    //Constructor...
-    public Kisi() {//p'Siz sefil cons
+    public Kisi() {
     }
-    public Kisi(String adSoyad, String kimlikNo, int yas) {//Full p2li telescopic cons..
+
+    public Kisi(String adSoyad, int yas) {
         this.adSoyad = adSoyad;
-        this.kimlikNo = kimlikNo;
-        this.yas = Math.abs(yas);
+        this.yas = yas;
     }
-    // getter-seter meth.
 
     public String getAdSoyad() {
         return adSoyad;
@@ -26,10 +20,6 @@ public class Kisi {//parent pojo class
         this.adSoyad = adSoyad;
     }
 
-    public String getKimlikNo() {
-        return kimlikNo;
-    }
-
     public int getYas() {
         return yas;
     }
@@ -37,19 +27,11 @@ public class Kisi {//parent pojo class
     public void setYas(int yas) {
         this.yas = yas;
     }
-    //toString
-
 
     @Override
     public String toString() {
         return
                 "adSoyad='" + adSoyad + '\'' +
-                ", kimlikNo='" + kimlikNo + '\'' +
-                ", yas=" + yas;
+                ", yas=" + yas ;
     }
 }
-
-
-
-
-

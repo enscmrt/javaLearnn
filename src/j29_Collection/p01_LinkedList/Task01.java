@@ -19,4 +19,5 @@ public class Task01 {
         String isim= scan.nextLine();
         System.out.println(list.remove(isim) ? "Agam eleman halledildi" : "Agam aradığınız kişiye ulaşılamadı");
     }
+
 }

@@ -1,30 +1,37 @@
 package j100_JavaProject.Depo_Proje;
 
-public class depo {
+import java.util.HashMap;
+import java.util.Map;
 
-   private int id =1000;
+public class UrunBilgisi {
+    static Map<Integer, UrunBilgisi> urunBilgisiMap = new HashMap<>();
+    static int id = 1000;
     private String urunIsmi;
+
     private String uretici;
     private int miktar;
     private String birim;
     private String raf;
 
-    public depo(int id, String urunIsmi, String uretici, int miktar, String birim, String raf) {
-        this.id = id;
+    public UrunBilgisi() {
+    }
+
+    public UrunBilgisi(String urunIsmi, String uretici, int miktar, String birim, String raf) {
         this.urunIsmi = urunIsmi;
         this.uretici = uretici;
         this.miktar = miktar;
         this.birim = birim;
         this.raf = raf;
-
     }
 
-    public int getId() {
+
+
+    public static int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public static void setId(int id) {
+        UrunBilgisi.id=id;
     }
 
     public String getUrunIsmi() {
@@ -69,13 +76,12 @@ public class depo {
 
     @Override
     public String toString() {
-        return "depo{" +
-                "id=" + id +
-                ", urunIsmi='" + urunIsmi + '\'' +
-                ", uretici='" + uretici + '\'' +
-                ", miktar=" + miktar +
-                ", birim='" + birim + '\'' +
-                ", raf='" + raf + '\'' +
-                '}';
+        return
+                "urunIsmi='" + urunIsmi + '\'' +
+                        ", uretici='" + uretici + '\'' +
+                        ", miktar=" + miktar +
+                        ", birim='" + birim + '\'' +
+                        ", raf='" + raf + '\'' +
+                        '}';
     }
 }
