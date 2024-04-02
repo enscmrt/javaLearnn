@@ -11,5 +11,20 @@ public class Task01 {
          */
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(14, 25, 36, 47, 58, 69, 12, 45, 78));
 
+        ListIterator<Integer>kt = list.listIterator();
+        while (kt.hasNext()){
+            kt.next();
+        }
+        while (kt.hasPrevious()){
+           int num= kt.previous();
+           if (num%2==1){
+               System.out.println(num*num);
+           }
+
+        }
+
+
+
+
     }
 }
