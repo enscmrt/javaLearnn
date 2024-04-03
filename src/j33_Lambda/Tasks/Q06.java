@@ -1,4 +1,6 @@
-package j33_Lambda;
+package j33_Lambda.Tasks;
+
+import j33_Lambda.SeedMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
