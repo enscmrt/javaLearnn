@@ -23,10 +23,16 @@ public class Task07 {
         LinkedHashSet<String> lhs = new LinkedHashSet<>(Arrays.asList("Germany", "France", "USA", "Canada", "Mexico", "Brazil"));
 
         String s1 = "Germany";
-        String s2 = "USA ";
+        String s2 = "USA";
+        System.out.println("removing(lhs,s1,s2) = " + removing(lhs, s1, s2));
 
 
+    }
 
+    private static LinkedHashSet<String> removing(LinkedHashSet<String> lhs, String s1, String s2) {
+        lhs.remove(s1);
+        lhs.remove(s2);
+        return lhs;
 
     }
 }

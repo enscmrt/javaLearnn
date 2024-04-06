@@ -1,9 +1,6 @@
 package j33_Lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class C10_LambdaObject {
@@ -47,12 +44,46 @@ public class C10_LambdaObject {
         System.out.println("printNotOrt63BykOgrSayisiBykToplam(unv) = " + printNotOrt63BykOgrSayisiBykToplam(unv));
         System.out.println("****Task 08*****");
         //task08-> Ogrenci sayisi 333'dan buyuk olan universite'lerin notOrt'larinin ortalamasini print eden code create ediniz...
+        print333Ort(unv);
         System.out.println("****Task 09*****");
         //task09-> "matematik" bolumlerinin sayisini  print eden code create ediniz...
+        System.out.println("printMathBolumSayisi(unv) = " + printMathBolumSayisi(unv));
         System.out.println("****Task 10*****");
         //task10-> Ogrenci sayilari 571'dan fazla olan universite'lerin en buyuk notOrt'unu print eden code create ediniz...
+        System.out.println("printOgr571ByMaxNotOrt(unv) = " + printOgr571ByMaxNotOrt(unv));
         System.out.println("****Task 11*****");
         //task11-> Ogrenci sayilari 1071'dan az olan universite'lerin en kucuk notOrt'unu print eden code create ediniz...
+        printOgr1071KckMinNotOrt(unv);
+    }
+
+    private static void printOgr1071KckMinNotOrt(List<C10_University> unv) {
+        Optional<Double>minNotOrt= unv.stream()
+                .filter(t->t.getOgrcSayisi()<1071)
+                .map(C10_University::getNotOrt)
+                .min(Comparator.naturalOrder());
+        System.out.println(minNotOrt);
+    }
+
+    private static OptionalDouble printOgr571ByMaxNotOrt(List<C10_University> unv) {
+       return unv.stream()
+                .filter(t->t.getOgrcSayisi()>571)
+                .mapToDouble(C10_University::getNotOrt)
+                .max();
+    }
+
+    private static long printMathBolumSayisi(List<C10_University> unv) {
+        return  unv.stream()
+                .filter(t->t.getBolum().equalsIgnoreCase("Matematik"))
+                .count();
+    }
+
+    private static void print333Ort(List<C10_University>unv) {
+        double ort= unv.stream()
+                .filter(t -> t.getOgrcSayisi() > 333)
+                .mapToDouble(C10_University::getNotOrt)
+                .average().orElse(0);
+        System.out.println(ort);
+
     }
 
     private static int printNotOrt63BykOgrSayisiBykToplam(List<C10_University> unv) {

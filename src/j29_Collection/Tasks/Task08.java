@@ -1,5 +1,8 @@
 package j29_Collection.Tasks;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 public class Task08 {
     /* TASK :
     Main method altinda bir double hashSet olusturunuz.
@@ -11,7 +14,10 @@ public class Task08 {
     Çıktı--> sonuc = 44.69
      */
     public static void main(String[] args) {
+        HashSet<Double>dhs=new HashSet<>();
 
 
     }
+
+
 }

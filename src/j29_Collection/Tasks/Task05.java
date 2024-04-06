@@ -2,6 +2,7 @@ package j29_Collection.Tasks;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Task05 {
 
@@ -24,7 +25,18 @@ public class Task05 {
 
         String s1 = "banana";
         String s2 = "peach";
+        System.out.println("changeSet(hs, s1, s2) = " + changeSet(hs, s1, s2));
 
 
     }
+
+    private static HashSet<String> changeSet(HashSet<String> hs, String s1, String s2) {
+        if (hs.contains(s1)) {
+            hs.remove(s1);
+            hs.add(s2);
+        }
+      return hs;
 }
+}
+
+
