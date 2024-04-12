@@ -18,7 +18,7 @@ public class JavaBankAtm {
 
 
     public static void main(String[] args) {
-        MethodlarClass.girisEkraninaGit();
+        j100_javaProjects.P03_javaBankATM.JavaBankATM03.MethodlarClass.girisEkraninaGit();
 //tr345657647567564756475676
 
 

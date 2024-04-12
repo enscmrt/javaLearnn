@@ -9,6 +9,18 @@ public class Task09 {
     */
 
     public static void main(String[] args) {
+        String[] names = {"javaCAN", "javaTAR", "javaNAZ"};
+        String[] surname = {"Ahmet", "Haluk", "İpek"};
+
+        HashMap<String, String> map = new HashMap<>();
+
+        for (int i = 0; i < names.length; i++) {
+            map.put(names[i], surname[i]);
+        }
+
+        for (String key : map.keySet()) {
+            System.out.println(key + "=" + map.get(key));
+        }
 
 
     }// main sonu

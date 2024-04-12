@@ -1,6 +1,7 @@
 package j30_Map.Tasks;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Task07 {
     /* task->
@@ -27,7 +28,15 @@ public class Task07 {
      */
 
     public static void main(String[] args) {
-
+        int key=3;
+        String value="Miami";
+        Map<Integer,String>yeni=new HashMap<>();
+        yeni.put(1,"New jersey");
+        yeni.put(2,"New York");
+        yeni.put(3,"London");
+        yeni.put(4,"Paris");
+        System.out.println("yeni.replace(1,value) = " + yeni.replace(1, "Miami"));
+        System.out.println("yeni = " + yeni);
 
 
     }//main sonu

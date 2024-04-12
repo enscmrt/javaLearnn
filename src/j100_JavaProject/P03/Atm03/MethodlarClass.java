@@ -36,7 +36,7 @@ public class MethodlarClass {
     }
 
     public static void bakiyeSorgula() {
-        System.out.println("Bakiyeniz : " + MusteriBilgileri.bakiye + " TL.\nDevam etmek icin 1, cikis icin 2");
+        System.out.println("Bakiyeniz : " + j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye + " TL.\nDevam etmek icin 1, cikis icin 2");
         int secim = scan.nextInt();
         if (secim == 1) {
             secimYap();
@@ -48,7 +48,7 @@ public class MethodlarClass {
     public static void paraYatir() {
         System.out.println("Yatirmak istediginiz tutari giriniz:");
         double yatirilanTutar=scan.nextDouble();
-        MusteriBilgileri.bakiye+=yatirilanTutar;
+        j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye+=yatirilanTutar;
         bakiyeSorgula();
 
 
@@ -57,11 +57,11 @@ public class MethodlarClass {
     public static void ParaCek() {
         System.out.println("Cekmek istediginiz tutari giriniz: ");
         double cekilecekTutar=scan.nextDouble();
-        if (cekilecekTutar>MusteriBilgileri.bakiye){
+        if (cekilecekTutar> j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye){
             System.out.println("Bakiyeniz yetersiz...!");
             bakiyeSorgula();
         }else{
-            MusteriBilgileri.bakiye-=cekilecekTutar;
+            j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye-=cekilecekTutar;
             bakiyeSorgula();
         }
 
@@ -76,11 +76,11 @@ public class MethodlarClass {
         }else {
             System.out.println("Gondermek istediniz tutari giriniz:");
             double gonderilecekTutar = scan.nextDouble();
-            if (gonderilecekTutar > MusteriBilgileri.bakiye) {
+            if (gonderilecekTutar > j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye) {
                 System.out.println("Bakiyeniz yetersiz...!");
                 bakiyeSorgula();
             } else {
-                MusteriBilgileri.bakiye -= gonderilecekTutar;
+                j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.bakiye -= gonderilecekTutar;
                 System.out.println("Belirttiginiz IBAN numarasina "+ gonderilecekTutar+" TL transfer edildi.");
                 bakiyeSorgula();
             }
@@ -93,10 +93,10 @@ public class MethodlarClass {
         Scanner scan =new Scanner(System.in);
         System.out.println("Lutfen mevcut sifrenizi giriniz: ");
         String sifreTeyit=scan.nextLine();
-        if (sifreTeyit.equals(MusteriBilgileri.getSifre())){
+        if (sifreTeyit.equals(j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.getSifre())){
             System.out.println("Lutfen yeni sifrenizi giriniz:");
             String yeniSifre =scan.nextLine();
-            MusteriBilgileri.setSifre(yeniSifre);
+            j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.setSifre(yeniSifre);
             System.out.println("Sifreniz basarili bir sekilde degistirildi");
             secimYap();
         }else{
@@ -116,8 +116,8 @@ public class MethodlarClass {
         System.out.println("Lutfen sifrenizi giriniz: ");
         String girilenSifre= scan.nextLine();
 
-        if (girilenKartNo.equals(MusteriBilgileri.getKartNo())&&
-                girilenSifre.equals(MusteriBilgileri.getSifre())){
+        if (girilenKartNo.equals(j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.getKartNo())&&
+                girilenSifre.equals(j100_javaProjects.P03_javaBankATM.JavaBankATM03.MusteriBilgileri.getSifre())){
             MethodlarClass.secimYap();
 
         }else{

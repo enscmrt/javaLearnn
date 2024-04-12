@@ -16,6 +16,27 @@ public class Task08 {
     public static void main(String[] args) {
         HashSet<Double>dhs=new HashSet<>();
 
+        setOlustur(dhs);
+        System.out.println(toplaminiAl(dhs));
+
+
+    }
+
+    private static Double toplaminiAl(HashSet<Double> dhs) {
+        Double toplam = 0.0;
+        for (Double d : dhs) {
+            toplam += d;
+        }
+        return toplam;
+    }
+
+    private static HashSet<Double> setOlustur(HashSet<Double> dhs) {
+        dhs.add(3.23);
+        dhs.add(3.10);
+        dhs.add(5.12);
+        dhs.add(10.12);
+        dhs.add(23.12);
+        return dhs;
 
     }
 
