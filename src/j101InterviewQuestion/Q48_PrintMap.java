@@ -12,6 +12,16 @@ public class Q48_PrintMap {
     Map kullanarak yazınız
      */
     public static void main(String[] args) {
+        Map<Integer, String> map = new LinkedHashMap<>();
+        map.put(10, "Java");
+        map.put(20, "PHP");
+        map.put(2, "Python");
+        map.put(57, "C++");
+        map.put(89, "C#");
+        map.put(40, "Javascript");
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ", " + entry.getValue());
+        }
 
     }
 }

@@ -8,7 +8,7 @@ public class Q34_MapTask {
 
 
     // BÖLÜM 1
-    // anahtar olarak groupName ve değer olarak groupMembers ile bir harita oluşturun
+    // anahtar olarak groupName ve değer olarak groupMembers ile bir map oluşturun
     // "Grup1" = ["Üye1", "Üye2"]
     // "Grup2" = ["Üye3", "Üye4", "Üye5"]
 
@@ -19,6 +19,11 @@ public class Q34_MapTask {
     // her grubun kaç üyesi olduğunu bul
 
     public static void main(String[] args) {
+        Map<String,String[]>groups=new HashMap<String,String[]>();
+        groups.put("Grup1",new String[]{"üye1", "üye2", "üye3", "üye4"});
+        groups.put("Grup2",new String[]{"üye5", "üye6", "üye7"});
+        System.out.println("Grup1 üye sayısı: "+groups.get("Grup1").length);
+        System.out.println("Grup2 üye sayısı: "+groups.get("Grup2").length);
 
     }
 }

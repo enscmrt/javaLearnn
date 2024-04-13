@@ -10,6 +10,13 @@ public class Q46_MapKeySet {
     // part 2: print all the keys of the map
 
     public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(6300, "Keciören");
+        map.put(140, "Altındag");
+        map.put(254, "Cankaya");
+        for (Map.Entry<Integer, String> entry : map.entrySet()){
+            System.out.println( entry.getKey() + " " + entry.getValue());
+        }
 
     }
 }

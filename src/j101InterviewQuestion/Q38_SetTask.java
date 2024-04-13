@@ -16,8 +16,24 @@ public class Q38_SetTask {
     // Set<Character> ve char değişkenlerini parametre olarak alan bir yöntem oluşturun
     // ve tüm karakterleri sete ekleyin
     public static void main(String[] args) {
+        ArrayList<Integer>al1=new ArrayList<>(Arrays.asList(1,2,17,231,589));
+        Set<Integer>al2=new HashSet<>();
+        yontem1(al1,al2);
+        Set<Character>al3=new HashSet<>();
+        char a='x';
+        yontem2(al3,a);
 
 
+    }
+
+    private static void yontem2(Set<Character> al3, char a) {
+        al3.add(a);
+        System.out.println("al3 = " + al3);
+    }
+
+    private static void yontem1(ArrayList<Integer> al1, Set<Integer> al2) {
+        al2.addAll(al1);
+        System.out.println("al2 = " + al2);
     }
 }
 

@@ -22,7 +22,9 @@ public class Q03_PrimeNumber {
                 if(asalMi){
                     System.out.println("Girilen "+sayı+" sayısı asal sayıdır");
 
-                }System.out.println("Girilen "+sayı+" sayısı asal sayı değildir");
+                }else {
+                    System.out.println("Girilen "+sayı+" sayısı asal sayı değildir");
+                }
 
             }else System.out.println("Girilen sayı asal değildir");
 

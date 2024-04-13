@@ -29,6 +29,7 @@ public class C01_HashMap {
         hm.put("Migros",null);// value unique değer  almak zorunda değil tekrarlı olabilir
         //map print->sout(map)
         System.out.println("hm = " + hm);
+        System.out.println("hm.size() = " + hm.size());
 
     }
 }
